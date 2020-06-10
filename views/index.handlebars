@@ -1,0 +1,43 @@
+<div class="row">
+<div class="col-md-12 jumbotron">
+<h1 class="title">EAT A Burger</h1>
+<p class="description">create burgers and eat em!</p>
+<img class="burger-img" src="/assets/images.burger.png" alt="burgerpic">
+</div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="heading">Burgers to Eat</div>
+    <ul>
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <span><strong>{{this.id}}. {{this.burger_name}}</strong></span>
+        {{/each}}
+        {{/unless}}
+    </ul>
+    </div>
+    <div class="col-md-3">
+        <button type="submit" class="btn btn-primary" id="devourBtn" data-id="{{this.id}}">Devour</button>
+    </div>
+ <div class="col-sm-3">
+        <div class="heading">Devoured!</div>
+    <ul>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <span><strong>{{this.id}}. {{this.burger_name}}</strong></span>
+        {{/each}}
+        {{/if}}
+    </ul>
+    </div>
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="burgerInput">Add a Burger!</label>
+    <input type="text" class="form-control" id="burgerInput" name="burgerName" aria-describedby="emailHelp" placeholder="Enter Burger">
+    <small id="emailHelp" class="form-text text-muted">Give me a Burger!</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
