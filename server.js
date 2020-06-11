@@ -1,18 +1,16 @@
-const express = require("express");
-const exphbs = require("express-handlebars");
+var express = require("express");
 
+var PORT =  process.env.PORT || 8080;
 
-let app = express();
-
-// Set the port of our application
-// process.env.PORT lets the port be set by Heroku
-const PORT = process.env.PORT || 8080;
+var app = express();
 
 //public
 app.use(express.static("public"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");

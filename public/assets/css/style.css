@@ -1,0 +1,22 @@
+.burger-img{
+    width: 200px;
+    height: 200px;
+}
+
+.create-form{
+    justify-content: center;
+    margin-left: 35%;
+    margin-bottom: 10%;
+    margin-top: 5em;;
+}
+
+.change-burger{
+    margin-left: .2em;
+    justify-content: center;
+
+}
+
+.burger-img{
+margin-left: 40%;
+}
+
