@@ -20,7 +20,7 @@ npm i
 
 ## Usage
 
-Deployed Link: https://secure-badlands-07383.herokuapp.com/
+Deployed Link: https://shielded-anchorage-70351.herokuapp.com/
 
 YouTube Demonstration Link: https://www.youtube.com/watch?v=klAS7j7Gf5I
 
